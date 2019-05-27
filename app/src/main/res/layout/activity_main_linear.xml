@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="35dp"
+    tools:context=".MainActivity">
+
+    <!-- Primeira Linha: Operando 1, Operador e Operando 2 -->
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/textInputLayout2"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <EditText
+            android:id="@+id/txtOperando1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Operando 1"
+            android:inputType="numberSigned"
+            android:paddingLeft="10dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/textInputLayout"
+        app:layout_constraintEnd_toStartOf="@id/textInputLayout3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_weight="2">
+
+        <EditText
+            android:id="@+id/txtOperador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="OP"
+            android:paddingLeft="10dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/textInputLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_weight="4">
+
+        <EditText
+            android:id="@+id/txtOperando2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Operando 2"
+            android:inputType="numberSigned"
+            android:paddingLeft="10dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- Segunda Linha: Resultado -->
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout">
+
+        <EditText
+            android:id="@+id/txtResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:enabled="false"
+            android:hint="Resultado" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <!-- Terceira Linha: 7, 8, 9 e + -->
+    <Button
+        android:id="@+id/btn7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="7"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn8"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout4"
+        app:layout_constraintHorizontal_weight="0.26"/>
+
+    <Button
+        android:id="@+id/btn8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="8"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/btn7"
+        app:layout_constraintEnd_toStartOf="@id/btn9"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout4"
+        app:layout_constraintHorizontal_weight="0.26"/>
+
+    <Button
+        android:id="@+id/btn9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="9"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/btn8"
+        app:layout_constraintEnd_toStartOf="@id/btnSoma"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout4"
+        app:layout_constraintHorizontal_weight="0.26"/>
+
+    <Button
+        android:id="@+id/btnSoma"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="+"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/btn9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout4"
+        app:layout_constraintHorizontal_weight="0.20"/>
+
+
+    <!-- Terceira Linha: 4, 5, 6 e - -->
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="4"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn5"
+        app:layout_constraintTop_toBottomOf="@id/btn7"
+        app:layout_constraintHorizontal_weight="0.26"/>
+
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/btn4"
+        app:layout_constraintEnd_toStartOf="@id/btn6"
+        app:layout_constraintTop_toBottomOf="@id/btn7"
+        app:layout_constraintHorizontal_weight="0.26"/>
+
+    <Button
+        android:id="@+id/btn6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="6"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/btn5"
+        app:layout_constraintEnd_toStartOf="@id/btnSubtracao"
+        app:layout_constraintTop_toBottomOf="@id/btn7"
+        app:layout_constraintHorizontal_weight="0.26"/>
+
+    <Button
+        android:id="@+id/btnSubtracao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="-"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/btn6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn7"
+        app:layout_constraintHorizontal_weight="0.20"/>
+
+
+    <!-- Terceira Linha: 1, 2, 3 e * -->
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn2"
+        app:layout_constraintTop_toBottomOf="@id/btn4"
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_weight="0.26"/>
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/btn1"
+        app:layout_constraintEnd_toStartOf="@id/btn3"
+        app:layout_constraintTop_toBottomOf="@id/btn4"
+        app:layout_constraintHorizontal_weight="0.26"/>
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/btn2"
+        app:layout_constraintEnd_toStartOf="@id/btnMultiplicacao"
+        app:layout_constraintTop_toBottomOf="@id/btn4"
+        app:layout_constraintHorizontal_weight="0.26"/>
+
+    <Button
+        android:id="@+id/btnMultiplicacao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="*"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/btn3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn4"
+        app:layout_constraintHorizontal_weight="0.20"/>
+
+
+    <!-- Quarta Linha: 0, Clear, Calcula e / -->
+    <Button
+        android:id="@+id/btn0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnClear"
+        app:layout_constraintTop_toBottomOf="@id/btn1"
+        app:layout_constraintHorizontal_weight="0.26"/>
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="C"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/btn0"
+        app:layout_constraintEnd_toStartOf="@id/btnCalc"
+        app:layout_constraintTop_toBottomOf="@id/btn1"
+        app:layout_constraintHorizontal_weight="0.26"/>
+
+    <Button
+        android:id="@+id/btnCalc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="="
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/btnClear"
+        app:layout_constraintEnd_toStartOf="@id/btnDivisao"
+        app:layout_constraintTop_toBottomOf="@id/btn1"
+        app:layout_constraintHorizontal_weight="0.26"/>
+
+    <Button
+        android:id="@+id/btnDivisao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="/"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/btnCalc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn1"
+        app:layout_constraintHorizontal_weight="0.20"/>
+
+
+</android.support.constraint.ConstraintLayout>
